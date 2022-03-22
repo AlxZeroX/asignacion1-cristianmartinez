@@ -1,42 +1,27 @@
-import React, { useContext } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
-
-import { AuthContext } from '../../auth/authContext';
-import { types } from '../../types/types';
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/appland_landscape-e1414258473112.png';
 
-export const Navbar = () => {
-
-    const { user, dispatch } = useContext(AuthContext)
-
-    const navigate = useNavigate();
-
-
-    const handleLogout = () => {
-
-        dispatch({ type: types.logout });
-
-        navigate('/login', {
-            replace: true
-        });
-    }
+export const Footer = () => {
 
     return (
-        <nav className="navbar navbar-expand-sm">
+        <footer className="footer navbar-expand-sm">
 
             <Link
                 className="navbar-brand"
                 to="/"
             >
-
-                <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
-
             </Link>
             <Link
                 className="navbar-brand"
                 to="/">
-                E-Commerce
+
+                <span className='footer-link'>
+                    <a href='/'>Appland E-Commerce
+                    </a>
+                </span>
+
             </Link>
 
             <div className="navbar-collapse">
@@ -46,21 +31,21 @@ export const Navbar = () => {
                         className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
                         to="/marvel"
                     >
-                        Consolas
+                        Sobre Nosotros
                     </NavLink>
 
                     <NavLink
                         className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
                         to="/dc"
                     >
-                        Videojuegos
+                        Direccion
                     </NavLink>
 
                     <NavLink
                         className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
                         to="/search"
                     >
-                        Buscar
+                        Contactanos
                     </NavLink>
                 </div>
             </div>
@@ -68,18 +53,19 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
 
-                    <span className="nav-item nav-link text-info">
-                        {user.name}
-                    </span>
+                    <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
 
-                    <button
-                        className="nav-item nav-link btn"
-                        onClick={handleLogout}
-                    >
-                        Logout
-                    </button>
                 </ul>
             </div>
-        </nav>
+
+            <div>
+                <span className='footer-link'><a href='/'>Home</a></span>
+                <span className='footer-link'><a href='/about'>About</a></span>
+                <span className='footer-link'><a href='/blog'>Blog</a></span>
+                <span className='footer-link'><a href='/contact'>Contact</a></span>
+            </div>
+            <div className='footer-copyright'>2022. This site was made by Cristian Martinez with React.</div>
+        </footer>
+
     )
 }

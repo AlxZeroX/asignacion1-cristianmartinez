@@ -23,41 +23,36 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-sm">
+        <nav className="py-12 flex justify-between bg-slate-600">
+            <div className="flex flex-row justify-center">
 
-            <Link
-                className="navbar-brand"
-                to="/"
-            >
+                <Link className="" to="/">
 
-                <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
+                    <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
 
-            </Link>
-            <Link
-                className="navbar-brand"
-                to="/">
-                E-Commerce
-            </Link>
+                </Link>
+                <Link className="px-2 text-xl text-center font-bold animate-pulse" to="/"> E-Commerce </Link>
+            </div>
 
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
+            <div className="flex flex-row justify-center space-x-8">
+                <div className="">
 
                     <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
                         to="/marvel"
                     >
                         Consolas
                     </NavLink>
 
                     <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
                         to="/dc"
                     >
                         Videojuegos
                     </NavLink>
 
                     <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
                         to="/search"
                     >
                         Buscar
@@ -65,15 +60,15 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
+            <div className="">
+                <ul className="">
 
-                    <span className="nav-item nav-link text-info">
+                    <span className="">
                         {user.name}
                     </span>
 
                     <button
-                        className="nav-item nav-link btn"
+                        className=""
                         onClick={handleLogout}
                     >
                         Logout

@@ -43,7 +43,6 @@ p{
 .footer {
     display: block;
     background-color: #474747;
-    align-items: center;
     border-top: 1px solid grey;
     border-width: 100%;
     box-sizing: border-box;
@@ -52,8 +51,6 @@ p{
     flex-shrink: 0;
     font-size: 12px;
     margin: 0px auto;
-    padding: 10px 0px;
-    text-align: center;
 }
 
 .icons img {

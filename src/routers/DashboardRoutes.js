@@ -5,10 +5,8 @@ import { DcScreen } from '../components/dc/DcScreen';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { SearchScreen } from '../components/search/SearchScreen';
 import { HeroScreen } from '../components/hero/HeroScreen';
-// import { Nave } from '../components/ui/Nave';
 import { Navbar } from '../components/ui/Navbar';
-
-
+// import { Nave } from '../components/ui/Nave';
 
 export const DashboardRoutes = () => {
     return (

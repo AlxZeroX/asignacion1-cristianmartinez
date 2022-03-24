@@ -31,15 +31,18 @@ export const HeroCard = ({
                             </div>
                             <h5 className="text-gray-900 text-xl font-medium mb-2">{superhero}</h5>
                             <h5 className="text-gray-900 font-medium mb-2">{alter_ego}</h5>
-                            {(alter_ego !== characters)
-                                && <p className="text-muted">{characters}</p>}
+                            <div>
+                                {(alter_ego !== characters)
+                                    && <p className="text-muted truncate w-32" >{characters}</p>}
+                            </div>
+
                             <p className="text-gray-700 text-base mb-4">
                                 <p className="text-muted">{first_appearance}</p>
                             </p>
                             <div className="text-right">
-                            <Link to={`/hero/${id}`}>
-                                <button type="button" className="inline-block px-6 py-2.5 bg-slate-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Ver Mas</button>
-                            </Link>
+                                <Link to={`/hero/${id}`}>
+                                    <button type="button" className="inline-block px-6 py-2.5 bg-slate-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Ver Mas</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

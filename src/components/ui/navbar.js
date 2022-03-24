@@ -23,7 +23,7 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="py-12 flex justify-between bg-slate-600">
+        <nav className="flex justify-between bg-slate-600">
             <div className="flex flex-row justify-center">
 
                 <Link className="" to="/">
@@ -31,7 +31,7 @@ export const Navbar = () => {
                     <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
 
                 </Link>
-                <Link className="px-2 text-xl text-center font-bold animate-pulse" to="/"> E-Commerce </Link>
+                <Link className="px-2 text-xl text-center font-bold animate-pulse text-yellow-300" to="/"> E-Commerce </Link>
             </div>
 
             <div className="flex flex-row justify-center space-x-8">

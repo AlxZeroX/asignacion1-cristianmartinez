@@ -6,66 +6,44 @@ import logo from '../../assets/appland_landscape-e1414258473112.png';
 export const Footer = () => {
 
     return (
-        <footer className="footer navbar-expand-sm">
+        <footer className="footer">
+            <div className="flex mx-auto">
 
-            <Link
-                className="navbar-brand"
-                to="/"
-            >
-            </Link>
-            <Link
-                className="navbar-brand"
-                to="/">
-
-                <span className='footer-link'>
-                    <a href='/'>Appland E-Commerce
-                    </a>
-                </span>
-
-            </Link>
-
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
-
-                    <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
-                        to="/marvel"
-                    >
-                        Sobre Nosotros
-                    </NavLink>
-
-                    <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
-                        to="/dc"
-                    >
-                        Direccion
-                    </NavLink>
-
-                    <NavLink
-                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
-                        to="/search"
-                    >
-                        Contactanos
-                    </NavLink>
-                </div>
-            </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
-
-                    <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
-
-                </ul>
-            </div>
-
-            <div>
                 <span className='footer-link'><a href='/'>Home</a></span>
                 <span className='footer-link'><a href='/about'>About</a></span>
-                <span className='footer-link'><a href='/blog'>Blog</a></span>
                 <span className='footer-link'><a href='/contact'>Contact</a></span>
-            </div>
-            <div className='footer-copyright'>2022. This site was made by Cristian Martinez with React.</div>
-        </footer>
 
+            </div>
+            <div className="flex justify-end px-5 ">
+                <div className="flex sm:justify-center xl:justify-start">
+                    <a href="" className="w-8 h-8 border-2 border-white rounded-full text-center py-1 text-yellow-400 hover:text-white hover:bg-blue-600 hover:border-blue-600">
+                        <i className="fab fa-facebook"></i>
+                    </a>
+                    <a href="" className="w-8 h-8 border-2 border-white rounded-full text-center py-1 ml-2 text-yellow-400 hover:text-white hover:bg-blue-400 hover:border-blue-400">
+                        <i className="fab fa-twitter"></i>
+                    </a>
+                    <a href="" className="w-8 h-8 border-2 border-white rounded-full text-center py-1 ml-2 text-yellow-400 hover:text-white hover:bg-red-600 hover:border-red-600">
+                        <i className="fab fa-google-plus-g"></i>
+                    </a>
+                </div>
+
+                <img
+                    src={logo}
+                    alt="Logo"
+                    className="animate__animated animate__fadeInLeft"
+                >
+                </img>
+                <Link
+                    className=""
+                    to="/">
+                    <span className='footer-link fa-fade'>
+                        <a
+                            href='/'>E-Commerce
+                        </a>
+                    </span>
+                </Link>
+            </div>
+            <div className='flex sm:justify-center xl:justify-center footer-copyright'>2022. This site was made by Cristian Martinez with React.</div>
+        </footer>
     )
 }

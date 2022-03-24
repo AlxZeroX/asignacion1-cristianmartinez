@@ -14,12 +14,9 @@ export const HeroScreen = () => {
 
     const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
 
-
-
     const handleReturn = () => {
         navigate(-1);
     }
-
 
     if (!hero) {
         return <Navigate to='/' />
@@ -37,14 +34,13 @@ export const HeroScreen = () => {
     // const imagePath = spidey; //import
     const imagePath = heroImages(`./${heroeId}.jpg`)
 
-
-
     return (
         <>
             <hr></hr>
-            <div className="flex justify-center card py-20">
-                <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg bg-white shadow-lg">
-                    <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg">
+            <div className="flex justify-center card p-20">
+                <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg bg-white shadow-lg border-2 border-black p-4">
+                    <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
                         <img
                             src={imagePath}
                             alt={superhero}
@@ -86,7 +82,17 @@ export const HeroScreen = () => {
                         </ul>
                         <hr></hr>
                         <h3 className="text-gray-600 font-bold">Characters</h3>
-                        <p className='text-center '>{characters}</p>
+                        <p className='text-center truncate md:overflow-clip'>{characters}</p>
+                        <hr></hr>
+                        <br></br>
+                        <div className="text-right">
+                            <button
+                                type="button"
+                                className="inline-block px-6 py-2.5 bg-slate-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                                onClick={handleReturn}
+                            >Regresar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

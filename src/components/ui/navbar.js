@@ -23,7 +23,7 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="flex justify-between bg-slate-600">
+        <nav className="flex justify-between bg-gray-500">
             <div className="flex flex-row justify-center">
 
                 <Link className="" to="/">
@@ -31,28 +31,28 @@ export const Navbar = () => {
                     <div><img src={logo} alt="Logo" className="animate__animated animate__fadeInLeft"></img></div>
 
                 </Link>
-                <Link className="px-2 text-xl text-center font-bold animate-pulse text-yellow-300" to="/"> E-Commerce </Link>
+                <Link className="px-2 text-xl text-center font-bold animate-pulse text-black" to="/"> E-Commerce </Link>
             </div>
 
-            <div className="flex flex-row justify-center space-x-8">
-                <div className="">
+            <div className="flex flex-row justify-center">
+                <div className="flex space-x-4 mx-auto">
 
                     <NavLink
-                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-orange-600 hover:text-white' + (isActive ? 'active' : '')}
                         to="/marvel"
                     >
                         Consolas
                     </NavLink>
 
                     <NavLink
-                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-orange-600 hover:text-white' + (isActive ? 'active' : '')}
                         to="/dc"
                     >
                         Videojuegos
                     </NavLink>
 
                     <NavLink
-                        className={({ isActive }) => '' + (isActive ? 'active' : '')}
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-orange-600 hover:text-white' + (isActive ? 'active' : '')}
                         to="/search"
                     >
                         Buscar
@@ -75,6 +75,8 @@ export const Navbar = () => {
                     </button>
                 </ul>
             </div>
+
         </nav>
+        
     )
 }

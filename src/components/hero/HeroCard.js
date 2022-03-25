@@ -18,10 +18,10 @@ export const HeroCard = ({
 
     return (
 
-        <div className="justify-center animate__animated animate__fadeIn">
+        <div className="animate__animated animate__fadeIn">
             <div className="">
 
-                <div className="flex py-2">
+                <div className="justify-center flex py-3">
                     <div className="rounded-lg shadow-lg bg-yellow-50 border-2 border-black max-w-sm">
                         <div className="p-6">
                             <div className="rounded-lg shadow-lg bg-white max-w-sm">
@@ -36,9 +36,9 @@ export const HeroCard = ({
                                     && <p className="text-muted truncate w-32" >{characters}</p>}
                             </div>
 
-                            <p className="text-gray-700 text-base mb-4">
-                                <p className="text-muted">{first_appearance}</p>
-                            </p>
+                            <div className="text-gray-700 text-base mb-4">
+                                <p className="text-muted text-sky-400">{first_appearance}</p>
+                            </div>
                             <div className="text-right">
                                 <Link to={`/hero/${id}`}>
                                     <button type="button" className="inline-block px-6 py-2.5 bg-slate-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Ver Mas</button>

@@ -13,47 +13,48 @@ export const SearchScreen = () => {
     const location = useLocation();
 
     const { q = '' } = queryString.parse(location.search);
-    
-    const [ formValues, handleInputChange ] = useForm({
+
+    const [formValues, handleInputChange] = useForm({
         searchText: q,
     });
 
     const { searchText } = formValues;
 
-    const heroesFileted = useMemo( () => getHeroesByName(q), [q] );
+    const heroesFileted = useMemo(() => getHeroesByName(q), [q]);
 
 
     const handleSearch = (e) => {
         e.preventDefault();
-        navigate(`?q=${ searchText }`)
+        navigate(`?q=${searchText}`)
     }
 
 
     return (
         <>
-            <h1>Búsquedas</h1>
+            <h1 className='bg-slate-600 text-white px-6 py-2 rounded-sm text-xl font-medium'>Búsquedas</h1>
             <hr />
 
-            <div className="row">
+            <div className="flex-auto">
+                
 
-                <div className="col-5">
+                <div className="px-6 py-2 rounded-lg text-xl font-medium">
                     <h4>Buscar</h4>
                     <hr />
 
-                    <form onSubmit={ handleSearch }>
-                        <input 
+                    <form onSubmit={handleSearch}>
+                        <input
                             type="text"
                             placeholder="Buscar un héroe"
                             className="form-control"
                             name="searchText"
                             autoComplete="off"
-                            value={ searchText }
-                            onChange={ handleInputChange }
+                            value={searchText}
+                            onChange={handleInputChange}
                         />
 
 
-                        <button 
-                            className="btn btn-outline-primary mt-1"
+                        <button
+                            className="bg-slate-600 text-white px-6 py-2 rounded-lg text-xl font-medium hover:bg-orange-600"
                             type="submit">
                             Buscar...
                         </button>
@@ -62,24 +63,28 @@ export const SearchScreen = () => {
 
 
                 </div>
+                <br />
+                <br />
+                <br />
 
-                <div className="col-7">
-                    <h4>Resultados</h4>
-                    <hr />
+                <h4 className='bg-red-600 text-white px-6 py-2 rounded-lg text-xl font-medium'>Resultados</h4>
+                <hr />
+                <div className="grid p-10 lg:grid-cols-4 md:grid-cols-2 gap-x-6 animate__animated animate__fadeIn">
+
 
                     {
                         (q === '')
                             ? <div className="alert alert-info"> Buscar un héroe </div>
-                            : ( heroesFileted.length === 0 ) 
-                                && <div className="alert alert-danger"> No hay resultados: { q } </div>
+                            : (heroesFileted.length === 0)
+                            && <div className="alert alert-danger"> No hay resultados: {q} </div>
                     }
 
 
                     {
                         heroesFileted.map(hero => (
-                            <HeroCard 
-                                key={ hero.id }
-                                { ...hero }
+                            <HeroCard
+                                key={hero.id}
+                                {...hero}
                             />
                         ))
                     }

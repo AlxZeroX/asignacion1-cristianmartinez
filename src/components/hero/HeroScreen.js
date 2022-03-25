@@ -38,9 +38,8 @@ export const HeroScreen = () => {
         <>
             <hr></hr>
             <div className="flex justify-center card p-20">
-                <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg bg-white shadow-lg border-2 border-black p-4">
-                    <div className="flex flex-col md:flex-row gra md:max-w-xl rounded-lg relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
-          data-mdb-ripple-color="light">
+                <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg border-2 border-black p-3">
+                    <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg relative">
                         <img
                             src={imagePath}
                             alt={superhero}

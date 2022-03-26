@@ -38,17 +38,24 @@ export const Navbar = () => {
                 <div className="flex space-x-4 mx-auto">
 
                     <NavLink
-                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-orange-600 hover:text-white' + (isActive ? 'active' : '')}
-                        to="/marvel"
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-blue-400 hover:text-white' + (isActive ? 'active' : '')}
+                        to="/ps4"
                     >
-                        Consolas
+                        PS4
                     </NavLink>
 
                     <NavLink
-                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-orange-600 hover:text-white' + (isActive ? 'active' : '')}
-                        to="/dc"
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-red-600 hover:text-white' + (isActive ? 'active' : '')}
+                        to="/pc"
                     >
-                        Videojuegos
+                        PC
+                    </NavLink>
+
+                    <NavLink
+                        className={({ isActive }) => 'text-black px-8 py-2 rounded-lg text-xl font-medium hover:bg-green-500 hover:text-white' + (isActive ? 'active' : '')}
+                        to="/xbox"
+                    >
+                        XBOX
                     </NavLink>
 
                     <NavLink
@@ -60,23 +67,23 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="">
-                <ul className="">
+            <div className="flex flex-row justify-center">
+                <ul className="text-white flex space-x-4 mx-auto">
 
-                    <span className="">
+                    <span className="px-2 py-5">
                         {user.name}
                     </span>
 
                     <button
-                        className=""
+                        className="fa-solid fa-arrow-right-from-bracket pr-10"
                         onClick={handleLogout}
                     >
-                        Logout
                     </button>
+
                 </ul>
             </div>
 
         </nav>
-        
+
     )
 }

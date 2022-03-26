@@ -1,32 +1,39 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Footer } from '../components/ui/Footer';
-import { DcScreen } from '../components/dc/DcScreen';
-import { MarvelScreen } from '../components/marvel/MarvelScreen';
-import { SearchScreen } from '../components/search/SearchScreen';
-import { HeroScreen } from '../components/hero/HeroScreen';
 import { Navbar } from '../components/ui/Navbar';
-// import { Nave } from '../components/ui/Nave';
+import { Home } from '../components/ui/Home';
+import { PS4Screen } from '../components/ps4/PS4Screen';
+import { Search } from '../components/search/Search';
+import { PCScreen } from '../components/pc/PCScreen';
+import { XboxScreen } from '../components/xbox/XboxScreen';
+import { ProductScreen } from '../components/products/ProductScreen';
 
 export const DashboardRoutes = () => {
     return (
         <>
-            <Navbar />
-
+            <div>
+                <Navbar />
+            </div>
 
             <div className="">
                 <Routes>
-                    <Route path="marvel" element={<MarvelScreen />} />
-                    <Route path="dc" element={<DcScreen />} />
+                    <Route path="inicio" element={<Home />} />
+                    <Route path="ps4" element={<PS4Screen />} />
+                    <Route path="pc" element={<PCScreen />} />
+                    <Route path="xbox" element={<XboxScreen />} />
 
-                    <Route path="search" element={<SearchScreen />} />
-                    <Route path="hero/:heroeId" element={<HeroScreen />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path="game/:gameId" element={<ProductScreen />} />
 
-                    <Route path="/" element={<MarvelScreen />} />
+                    <Route path="/" element={<Home />} />
                 </Routes>
             </div>
 
-            <Footer />
+            <div>
+                <Footer />
+            </div>
+
         </>
     )
 }

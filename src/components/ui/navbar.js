@@ -70,9 +70,7 @@ export const Navbar = () => {
             <div className="flex flex-row justify-center">
                 <ul className="text-white flex space-x-4 mx-auto">
 
-                    <span className="px-2 py-5">
-                        {user.name}
-                    </span>
+                    <button className="px-4 text-base text-white bg-blue-900 rounded shadow focus:outline-none hover:bg-blue-800"><span className="ml-2 align-middle">{user.name}</span></button>
 
                     <button
                         className="fa-solid fa-arrow-right-from-bracket pr-10"

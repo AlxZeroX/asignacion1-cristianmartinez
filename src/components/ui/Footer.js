@@ -6,7 +6,7 @@ import logo from '../../assets/appland_landscape-e1414258473112.png';
 export const Footer = () => {
 
     return (
-        <footer className="bg-neutral-700 ">
+        <footer className="bg-neutral-700">
             <Link
                 to="/">
                 <div className="flex space-x-3 justify-center">

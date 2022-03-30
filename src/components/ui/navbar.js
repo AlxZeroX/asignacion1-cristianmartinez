@@ -1,25 +1,18 @@
-import React, { useContext } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { Link, NavLink } from 'react-router-dom'
 
-import { AuthContext } from '../../auth/authContext';
-import { types } from '../../types/types';
-
+import { startLogout } from "../../action/auth";
+import { Login } from "./login";
 import logo from '../../assets/appland_landscape-e1414258473112.png';
 
 export const Navbar = () => {
 
-    const { user, dispatch } = useContext(AuthContext)
-
-    const navigate = useNavigate();
-
-
+    const { cheking, displayName } = useSelector((state) => state.auth);
+    const dispatch = useDispatch();
     const handleLogout = () => {
+        dispatch(startLogout());
 
-        dispatch({ type: types.logout });
-
-        navigate('/login', {
-            replace: true
-        });
     }
 
     return (
@@ -68,20 +61,28 @@ export const Navbar = () => {
             </div>
 
             <div className="flex flex-row justify-center">
-                <ul className="text-white flex space-x-4 mx-auto">
+                {cheking ? (
+                    <ul className="text-white flex space-x-4 mx-auto">
+                        <button
+                            className="px-4 text-base text-white bg-blue-800 rounded shadow focus:outline-none hover:bg-blue-900"
+                        >
+                            <span
+                                className="ml-2 align-middle">{displayName}
+                            </span>
+                        </button>
 
-                    <button className="px-4 text-base text-white bg-blue-900 rounded shadow focus:outline-none hover:bg-blue-800"><span className="ml-2 align-middle">{user.name}</span></button>
-
-                    <button
-                        className="fa-solid fa-arrow-right-from-bracket pr-10"
-                        onClick={handleLogout}
-                    >
-                    </button>
-
-                </ul>
+                        <button
+                            className="fa-solid fa-arrow-right-from-bracket pr-10"
+                            onClick={handleLogout}
+                        >
+                        </button>
+                    </ul>
+                ) : (
+                    <div>
+                        <Login />
+                    </div>
+                )}
             </div>
-
         </nav>
-
     )
 }

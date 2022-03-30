@@ -1,25 +1,13 @@
-import React, { useReducer, useEffect } from 'react'
-import { AppRouter } from './routers/AppRouter'
-import { AuthContext } from './auth/authContext'
-import { authReducer } from './auth/authReducer'
+import React from 'react'
+import { Provider } from "react-redux";
 
-const init = () => {
-    return JSON.parse(localStorage.getItem('user')) || { logged: false };
-}
-
+import { store } from "./store/store";
+import { AppRouter } from './routers/AppRouter';
 
 export const EcomApp = () => {
-
-    const [user, dispatch] = useReducer(authReducer, {}, init);
-
-    useEffect(() => {
-        localStorage.setItem('user', JSON.stringify(user));
-    }, [user])
-
     return (
-
-        <AuthContext.Provider value={{ user, dispatch }}>
+        <Provider store={store}>
             <AppRouter />
-        </AuthContext.Provider>
+        </Provider>
     )
 }

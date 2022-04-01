@@ -3,6 +3,7 @@ import { Calificacion } from "./Calificacion";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { EliminarComment } from "../../action/comment";
+import { Footer } from "../ui/Footer";
 const appland = require.context("../../assets/imagenes", true);
 
 export const ProductScreen = () => {
@@ -130,6 +131,7 @@ export const ProductScreen = () => {
                 </div>
             </div>
             <Calificacion />
+            <Footer />
         </>
     )
 }

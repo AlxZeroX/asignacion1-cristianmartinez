@@ -8,8 +8,9 @@ import { Xbox } from '../components/xbox/Xbox';
 import { ProductScreen } from '../components/Contenido/ProductScreen';
 import { Inicio } from '../components/ui/Inicio';
 import { NoFound } from '../components/ui/NoFound';
-import { Search } from '../components/search/Search';
+import { SearchScreen } from '../components/search/SearchScreen';
 
+// import { Search } from '../components/search/Search';
 
 export const DashboardRoutes = () => {
     return (
@@ -21,7 +22,7 @@ export const DashboardRoutes = () => {
                 <Route path="ps4" element={<Ps4 />} />
                 <Route path="pc" element={<Pc />} />
                 <Route path="xbox" element={<Xbox />} />
-                <Route path="search" element={<Search />} />
+                <Route path="search" element={<SearchScreen />} />
                 <Route path="item/:img" element={<ProductScreen />} />
                 <Route path="LoginScreen" element={<LoginScreen />} />
                 <Route path="*" element={<NoFound/>} />

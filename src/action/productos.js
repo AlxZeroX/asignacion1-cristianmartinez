@@ -28,7 +28,7 @@ export const getXbox = () => {
 };
 
 //getconsolas
-export const getAll = () => {
+export const getTodo = () => {
   return async (dispatch) => {
     const resp = await TraidaDatos('api/producto/all');
     const productos = await resp.json();

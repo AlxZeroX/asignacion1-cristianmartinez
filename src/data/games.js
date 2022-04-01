@@ -7,7 +7,7 @@ export const games = [
         'tags': 'Vicarious Visions, Activision',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': '5WTtZUX9GCLffzYpsthZ',
     },
     {
         'id': 'pc-dead-cells',
@@ -17,7 +17,7 @@ export const games = [
         'tags': 'Motion Twin, Epic Games, Roguelite, Metroidvania',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'GtnY6sKN7uJaE1HMyfFy',
     },
     {
         'id': 'pc-devil-may-cry',
@@ -27,7 +27,7 @@ export const games = [
         'tags': 'Ninja Theory, Capcom, Acción, Plataformas',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'YnSUw74KiCmgYiQfmpEa',
     },
     {
         'id': 'pc-dragon-age-origin',
@@ -37,7 +37,7 @@ export const games = [
         'tags': 'BioWare, Electronic Arts',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'SFfqwKunZBdRHzcNHrnN',
     },
     {
         'id': 'pc-dragonball-xenoverse2',
@@ -47,7 +47,7 @@ export const games = [
         'tags': 'Dimps, Bandai Namco Games, Akira Toriyama',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'Y6DzJq8mpPqbWWwsOHDn',
     },
     {
         'id': 'pc-rayman-origins',
@@ -57,7 +57,7 @@ export const games = [
         'tags': 'Ubisoft Montpellier, Ubisoft, Plataformas',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'h49T7d37Ss1lAkmUOsGV',
     },
     {
         'id': 'pc-the-thing',
@@ -67,7 +67,7 @@ export const games = [
         'tags': 'Black Label Games, Computer Artworks Ltd, Behind view',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': '3UyVHtnp2kNI28uFNS7n',
     },
     {
         'id': 'pc-thief',
@@ -77,7 +77,7 @@ export const games = [
         'tags': 'Eidos Montréal, Square Enix, Sigilo',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': 'q5NLrGZIij3jVn1dtkKh',
     },
     {
         'id': 'pc-worms-world-party-remastered',
@@ -87,7 +87,7 @@ export const games = [
         'tags': 'Team17 Digital Ltd, Worms',
         'date': 'Marzo 25, 2022',
         'category': 'pc',
-        'rating': 'test',
+        'rating': '3UyVHtnp2kNI28uFNS7n',
     },
     {
         'id': 'ps4',
@@ -97,7 +97,7 @@ export const games = [
         'tags': 'juegos, aplicaciones, capturas de pantalla, videos',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'jnK5JvizgsF95qiUN1Pr',
     },
     {
         'id': 'ps4-bioshock',
@@ -107,7 +107,7 @@ export const games = [
         'tags': 'Take-Two, Irrational Games',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': '5D6PH7jaFXlyJVmu8fc3',
     },
     {
         'id': 'ps4-control',
@@ -117,7 +117,7 @@ export const games = [
         'tags': '505 Games, Remedy Entertainment',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'ztQx2xboE5kq9gFEnqxa',
     },
     {
         'id': 'ps4-cyberpunk',
@@ -127,7 +127,7 @@ export const games = [
         'tags': 'CD Projekt RED, CD Projekt',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'poAMFOszhRQjOt54Xz7O',
     },
     {
         'id': 'ps4-detroid',
@@ -137,7 +137,7 @@ export const games = [
         'tags': 'Quantic Dream, Sony Interactive Entertainment',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'q5NLrGZIij3jVn1dtkKh',
     },
     {
         'id': 'ps4-doom-eternal',
@@ -147,7 +147,7 @@ export const games = [
         'tags': 'id Software, Bethesda Softworks',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'CyLkmbLjffTZPbMN3laZ',
     },
     {
         'id': 'ps4-farcry4',
@@ -157,7 +157,7 @@ export const games = [
         'tags': 'Ubisoft Montreal, Ubisoft Toronto, Ubisoft Red Storm, Ubisoft',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'C2ARzzpC5Kd9vVDJWCn5',
     },
     {
         'id': 'ps4-god-of-war',
@@ -167,7 +167,7 @@ export const games = [
         'tags': 'SCE Santa Monica Studio, Sony Computer Entertainment, Acción, Aventura',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': '5HKMsX8jwS4zakRGuNbK',
     },
     {
         'id': 'ps4-injustice2',
@@ -177,7 +177,7 @@ export const games = [
         'tags': 'NetherRealm Studios, Warner Games, Ed Boon, Lucha',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': '2rRplyLIxJLLr0qrMrYo',
     },
     {
         'id': 'ps4-madmax',
@@ -187,7 +187,7 @@ export const games = [
         'tags': 'Avalanche Studios, Warner Bros. Interactive Entertainment',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'YRIxeCQU4WUQt3sjrbqX',
     },
     {
         'id': 'ps4-mortal-kombat',
@@ -197,7 +197,7 @@ export const games = [
         'tags': 'NetherRealm Studios, Warner Bros. Interactive Entertainment, Ed Boon',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'EVhXhARIfbPW7UvzU428',
     },
     {
         'id': 'ps4-resident-evil4',
@@ -207,7 +207,7 @@ export const games = [
         'tags': 'Capcom, Shinji Mikami, Disparos en tercera persona, videojuego de terror, acción',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'SCxaaqo4nByHdkLkDoNK',
     },
     {
         'id': 'ps4-spider-man',
@@ -217,7 +217,7 @@ export const games = [
         'tags': 'Insomniac Games, Marvel Games, Sony Interactive Entertainment',
         'date': 'Marzo 25, 2022',
         'category': 'ps4',
-        'rating': 'test',
+        'rating': 'MSfMyOsh1WJo4lWArMln',
     },
     {
         'id': 'xbox-hood',
@@ -227,6 +227,6 @@ export const games = [
         'tags': 'Sumo Newcastle, Focus Home Interactive, Unreal Engine 4',
         'date': 'Marzo 25, 2022',
         'category': 'xbox',
-        'rating': 'test',
+        'rating': 'iNyNPfsKh1gTXAVmJjal',
     }
 ]

@@ -129,10 +129,6 @@ export const ProductScreen = () => {
                     </div>
                 </div>
             </div>
-
-            <div>
-                <h1 className='text-black px-20 rounded-sm text-3xl font-extrabold'>Reviews</h1>
-            </div>
             <Calificacion />
         </>
     )

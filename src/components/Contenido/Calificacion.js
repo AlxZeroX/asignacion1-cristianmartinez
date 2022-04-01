@@ -126,16 +126,16 @@ export const Calificacion = () => {
 
   return (
     <div>
-      <hr className="mt-8 border-t-1 border-solid  border-current mx-5" />
+      <hr className="mt-8 border-t-1 border-solid border-current mx-5" />
       <div className="m-5 font-serif">
+
         <h1 className="mb-5">Ingresa tu Reseña</h1>
         <form onSubmit={hadlesubmit}>
           <input
             placeholder="Escibe tu comentario"
-            className="shadow appearance-none border rounded pr-64 py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border rounded pr-64 py-2 px-3 text-gray-800 w-full h-full"
             name="comment"
             autoComplete="off"
-
             value={comment}
             onChange={handleInputChange}
           />
@@ -194,7 +194,7 @@ export const Calificacion = () => {
 
 
           <div
-            className=" bg-blue-700 ml-96 w-40 text-center cursor-pointer text-white rounded  hover:bg-blue-800 mt-6 py-2 mb-2"
+            className=" bg-blue-700 w-40 ml-auto text-center cursor-pointer text-white rounded  hover:bg-blue-800 mt-6 py-2 mb-2"
             type="submit"
             onClick={hadlesubmit}
           >
@@ -205,7 +205,8 @@ export const Calificacion = () => {
       </div>
       <hr className="mt-8 mb-8 border-t-1 border-solid border-current mx-5 " />
       <div className="font-serif ml-5">
-        <h1 className="mb-5">Comments</h1>
+        <h1 className='text-black rounded-sm text-3xl font-extrabold'>Reseñas</h1>
+
 
         {/* comentarios */}
 

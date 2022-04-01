@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getAll } from '../../action/productos';
+import { getTodo } from '../../action/productos';
 import { Productlist } from '../Contenido/Productlist';
 import { Carousel } from './carousel'
 import { Footer } from './Footer';
@@ -17,7 +17,7 @@ export const Inicio = () => {
   const [allFilter, setAllFilter] = useState([]);
 
   useEffect(() => {
-    dispatch(getAll());
+    dispatch(getTodo());
   }, [dispatch]);
 
   useEffect(() => {

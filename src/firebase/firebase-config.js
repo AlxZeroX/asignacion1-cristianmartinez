@@ -12,6 +12,8 @@ const firebaseConfig = {
   measurementId: "G-E137NBFTE3"
 };
 
+const db = initializeApp(firebaseConfig);
+
 const firebaseApp = initializeApp(firebaseConfig);
 const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
@@ -19,6 +21,7 @@ const facebookProvider = new FacebookAuthProvider();
 //https://e-commerce-24233.firebaseapp.com/__/auth/handler
 
 export {
+  db,
   firebaseApp,
   googleProvider,
   facebookProvider

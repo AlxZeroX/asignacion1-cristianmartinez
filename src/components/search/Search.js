@@ -4,7 +4,7 @@ import queryString from 'query-string'
 
 import { useForm } from '../../hooks/useForm';
 import { getProductByName } from '../../selectors/getProductByName';
-import { ProductCard } from '../products/ProductCard';
+import { ProductCardSearch } from '../products/ProductCardSearch';
 
 
 export const Search = () => {
@@ -81,10 +81,10 @@ export const Search = () => {
 
 
                     {
-                        gamesFileted.map(game => (
-                            <ProductCard
-                                key={game.id}
-                                {...game}
+                        gamesFileted.map(producto => (
+                            <ProductCardSearch
+                                key={producto.productname}
+                                {...producto}
                             />
                         ))
                     }

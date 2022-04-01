@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Navbar } from '../components/ui/Navbar';
-import { Search } from '../components/search/Search';
 import { LoginScreen } from '../components/login/LoginScreen';
 import { Ps4 } from '../components/ps4/Ps4';
 import { Pc } from '../components/pc/Pc';
@@ -9,6 +8,7 @@ import { Xbox } from '../components/xbox/Xbox';
 import { ProductScreen } from '../components/Contenido/ProductScreen';
 import { Inicio } from '../components/ui/Inicio';
 import { NoFound } from '../components/ui/NoFound';
+import { Search } from '../components/search/Search';
 
 
 export const DashboardRoutes = () => {
@@ -25,9 +25,6 @@ export const DashboardRoutes = () => {
                 <Route path="item/:img" element={<ProductScreen />} />
                 <Route path="LoginScreen" element={<LoginScreen />} />
                 <Route path="*" element={<NoFound/>} />
-
-
-
             </Routes>
             
         </>

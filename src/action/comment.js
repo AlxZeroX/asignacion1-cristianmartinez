@@ -49,7 +49,6 @@ export const postComments = (
   date,
   user,
   uid,
-  category
 ) => {
   return async (dispatch) => {
     const resp = await TraidaDatos(
@@ -60,16 +59,16 @@ export const postComments = (
     const body = await resp.json();
 
     if (body.ok) {
-      dispatch(putCalificacion(category, id));
+      dispatch(putCalificacion(id));
       dispatch(getComments());
       dispatch(getCommentsImg(id));    
     }
   };
 };
 
-const putCalificacion = (category, idImg) => {
+const putCalificacion = ( id ) => {
   return async (dispatch) => {
-    const commentImage = await TraidaDatos(`api/comments/${idImg}`, {}, "GET");
+    const commentImage = await TraidaDatos(`api/comments/${id}`, {}, "GET");
     const comment = await commentImage.json();
 
     const { commentImg } = comment;
@@ -86,7 +85,7 @@ const putCalificacion = (category, idImg) => {
       const commentcalificacion = Math.round(suma / count);
 
 
-   await TraidaDatos(`api/comments/${category}/${idImg}`,{commentcalificacion},"PUT");
+   await TraidaDatos(`api/comments/${id}`,{commentcalificacion},"PUT");
 
 
  

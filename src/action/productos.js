@@ -1,38 +1,38 @@
 import { TraidaDatos } from "../helpers/fetch";
 import { types } from "../types/types";
 
-export const getMice = () => {
+//getps4
+export const getPs4 = () => {
   return async (dispatch) => {
-
-    const resp = await TraidaDatos(`api/categories/mice`, {}, 'GET');
-    const body = await resp.json();
-
-    if (body.ok) {
-      dispatch(geteventos(body.productos))
-    }
+    const resp = await TraidaDatos('api/producto/ps4');
+    const productos = await resp.json();
+    dispatch(geteventos(productos));
   };
 };
 
-export const getKeyboards = () => {
+export const getPC = () => {
   return async (dispatch) => {
-
-    const resp = await TraidaDatos(`api/categories/keyboards`, {}, 'GET');
-    const body = await resp.json();
-    if (body.ok) {
-      dispatch(geteventos(body.productos))
-
-    }
+    const resp = await TraidaDatos('api/producto/pc');
+    const productos = await resp.json();
+    dispatch(geteventos(productos));
   };
 };
 
-export const getMonitors = () => {
+//getxbox
+export const getXbox = () => {
   return async (dispatch) => {
+    const resp = await TraidaDatos('api/producto/xbox');
+    const productos = await resp.json();
+    dispatch(geteventos(productos));
+  };
+};
 
-    const resp = await TraidaDatos(`api/categories/monitors`, {}, 'GET');
-    const body = await resp.json();
-    if (body.ok) {
-      dispatch(geteventos(body.productos))
-    }
+//getconsolas
+export const getAll = () => {
+  return async (dispatch) => {
+    const resp = await TraidaDatos('api/producto/all');
+    const productos = await resp.json();
+    dispatch(geteventos(productos));
   };
 };
 
@@ -43,7 +43,6 @@ const geteventos = (productos) => ({
 
 
 export const DatoActivo = (activo) => ({
-
   type: types.datoActivo,
   payload: activo
 }

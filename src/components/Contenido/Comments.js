@@ -1,16 +1,12 @@
 import React from 'react';
 
 
-const appland = require.context("../../imagenes", true);
+const appland = require.context("../../assets/imagenes", true);
 
 export const Comments = ({qualify,comment,date,user}) => {
 
-
- 
   return (
-
     <div className="font-serif ml-5">
-   
     <div className="grid sm:grid-cols-2 md:grid-cols-4 rounded-xl shadow-md  mb-10 border mx-10 overflow-hidden  ">
       <div className="mx-10   ">
       <div className="flex overflow-hidden  mt-8">

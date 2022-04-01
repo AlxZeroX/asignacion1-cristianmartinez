@@ -8,9 +8,9 @@ import Swal from "sweetalert2";
 import { useForm } from "../../hooks/useForm";
 
 import { Comments } from "./Comments";
-import { getCommentsImg, postComments } from "../../actions/comment";
+import { getCommentsImg, postComments } from "../../action/comment";
 
-const appland = require.context("../../imagenes", true);
+const appland = require.context("../../assets/imagenes", true);
 
 export const Calificacion = () => {
   const [qualify, setQualify] = useState(5);
@@ -37,21 +37,21 @@ export const Calificacion = () => {
     dispatch(getCommentsImg(id));
   }, [dispatch, id]);
 
- 
+
   const hadlesubmit = (e) => {
     e.preventDefault();
 
     const IdUser = commentUser.map((userid) => (userid = userid.uid));
 
     if (cheking) {
-      if (comment !=='' ) {
+      if (comment !== '') {
         let idComparar = "";
         for (let i = 0; i < IdUser.length; i++) {
           if (uid === IdUser[i]) {
             idComparar = IdUser[i];
           }
         }
-  
+
         if (uid !== idComparar) {
           setComments([
             ...comments,
@@ -62,17 +62,17 @@ export const Calificacion = () => {
               user: displayName,
             },
           ]);
-  
+
           dispatch(
             postComments(id, qualify, comment, fecha, displayName, uid, category)
           );
-  
+
           reset();
           setQualify(5);
-  
+
           Swal.fire({
             icon: "success",
-            title: "Se agrego el comentario correctamente",
+            title: "Comentario Agregado correctamente",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -86,17 +86,17 @@ export const Calificacion = () => {
           reset();
           setQualify(5);
         }
-        
-      }else{
+
+      } else {
         Swal.fire({
           icon: "warning",
-          title: "Completa el campo",
+          title: "Completa los campos necesarios",
           showConfirmButton: false,
           timer: 1500,
         });
 
       }
-     
+
     } else {
       Swal.fire({
         icon: "warning",
@@ -128,9 +128,18 @@ export const Calificacion = () => {
     <div>
       <hr className="mt-8 border-t-1 border-solid  border-current mx-5" />
       <div className="m-5 font-serif">
-        <h1 className="mb-5">Your Rating</h1>
+        <h1 className="mb-5">Ingresa tu Reseña</h1>
         <form onSubmit={hadlesubmit}>
-          <div className="flex overflow-hidden mb-4">
+          <input
+            placeholder="Escibe tu comentario"
+            className="shadow appearance-none border rounded pr-64 py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+            name="comment"
+            autoComplete="off"
+
+            value={comment}
+            onChange={handleInputChange}
+          />
+          <div className="text-center flex overflow-hidden mb-4">
             <div>
               <img
                 src={appland(
@@ -183,21 +192,13 @@ export const Calificacion = () => {
             </div>
           </div>
 
-          <input
-            placeholder="Write your comment"
-            className="shadow appearance-none border rounded pr-64 py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline"
-            name="comment"
-            autoComplete="off"
-            
-            value={comment}
-            onChange={handleInputChange}
-          />
+
           <div
             className=" bg-blue-700 ml-96 w-40 text-center cursor-pointer text-white rounded  hover:bg-blue-800 mt-6 py-2 mb-2"
             type="submit"
             onClick={hadlesubmit}
           >
-            Send
+            Enviar
           </div>
         </form>
         {/* <i className="fa fa-ligth fa-star mt-1 h-8 w-8 absolute "></i> */}
